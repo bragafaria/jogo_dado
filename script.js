@@ -119,3 +119,17 @@ btnNew.addEventListener('click', function () {
   bgStatus0.classList.add('player--active');
   bgStatus1.classList.remove('player--active');
 });
+function openPopup() {
+  var popup = document.getElementById('popup');
+  popup.style.display = 'block';
+}
+
+function closePopup() {
+  var popup = document.getElementById('popup');
+  popup.style.display = 'none';
+}
+
+document.querySelector('.btn--show-popup').addEventListener('click', openPopup);
+document
+  .querySelector('.btn--close-popup')
+  .addEventListener('click', closePopup);
