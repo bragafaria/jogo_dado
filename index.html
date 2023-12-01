@@ -8,12 +8,44 @@
     <title>Pig Game</title>
   </head>
   <body>
-    <main>
+    <div class="popup-container" id="popup">
+      <a href="#nada2" class="btn--close-popup" onclick="closePopup()">X</a>
+      <div class="popup-content">
+        <!-- Popup content goes here -->
+        <p>
+          1- Lance o dado apertando o botão <strong><em>"Lançar"</em></strong
+          >.
+        </p>
+        <p>
+          2- O número do dado lançado será acumulado no campo
+          <strong><em>"Pontos"</em></strong
+          >.
+        </p>
+        <p>
+          3- Aperte o botão <strong><em>"Segurar"</em></strong> para garantir
+          seus pontos acumulados. Eles serão somados a pontuação principal.
+        </p>
+        <p>
+          4- Caso o dado retorne o
+          <strong
+            ><em
+              >número 1, você perderá seus pontos acululados e perdera a vez</em
+            ></strong
+          >.
+        </p>
+        <p>
+          5- O primeiro jogador que
+          <strong><em>somar 100 pontos</em></strong> na pontuação principal
+          vence.
+        </p>
+      </div>
+    </div>
+    <main class="position-main">
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">43</p>
         <div class="current">
-          <p class="current-label">Current</p>
+          <p class="current-label">Pontos</p>
           <p class="current-score" id="current--0">0</p>
         </div>
       </section>
@@ -21,15 +53,18 @@
         <h2 class="name" id="name--1">Player 2</h2>
         <p class="score" id="score--1">24</p>
         <div class="current">
-          <p class="current-label">Current</p>
+          <p class="current-label">Pontos</p>
           <p class="current-score" id="current--1">0</p>
         </div>
       </section>
 
       <img src="dice-5.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new">🔄 New game</button>
-      <button class="btn btn--roll">🎲 Roll dice</button>
-      <button class="btn btn--hold">📥 Hold</button>
+      <button class="btn btn--new">🔄 Novo Jogo</button>
+      <button class="btn btn--roll">🎲 Lançar</button>
+      <button class="btn btn--hold">📥 Segurar</button>
+      <span class="position">
+        <a href="#nada" class="btn--show-popup">INSTRUÇÕES!</a>
+      </span>
     </main>
     <script src="script.js"></script>
   </body>
